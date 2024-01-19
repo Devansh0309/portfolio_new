@@ -1,0 +1,3 @@
+.recommendations-content{
+    @include flexDisplay($direction: column,$justify: center, $align: center)
+}

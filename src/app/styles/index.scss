@@ -1,0 +1,8 @@
+.home-content{
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
+@import './nav.scss';
+@import './header.scss';
+@import './recommendations.scss'

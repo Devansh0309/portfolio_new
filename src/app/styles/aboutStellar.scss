@@ -1,0 +1,31 @@
+.about-stellar-content {
+  width: 100%;
+  height: 667px;
+  @include flexDisplay($direction: column, $justify: space-around);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("../../../public/headerBackground.jpg");
+  .key-points {
+    font-size: 20px;
+    font-weight: 600;
+    @include flexDisplay(
+      $direction: column,
+      $justify: flex-start,
+      $align: flex-start
+    );
+    row-gap: 30px;
+    div {
+      .key-point-content {
+        // border-bottom: 4px solid #1976d2;
+      }
+
+      .key-points-arrow {
+        color: #1976d2;
+        font-weight:900;
+        border-bottom: none;
+      }
+    }
+  }
+}

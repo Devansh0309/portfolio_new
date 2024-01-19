@@ -1,8 +1,11 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import companyLogo from "../../../public/logo2.png";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
+  const navigate = useRouter()
   return (
     <div className="nav-content">
       <div className="nav-left">
@@ -17,10 +20,18 @@ export default function Navbar() {
           />
       </div>
       <div className="nav-right">
-        <span>About me |</span>
-        <span> Recommendations |</span>
-        <span> Why join Stellar? |</span>
-        <span>LinkedIn posts</span>
+        <span onClick={()=>{
+          navigate.push("./Header")
+        }}>About me |</span>
+        <span onClick={()=>{
+          navigate.push("./Recommendations")
+        }}> Recommendations |</span>
+        <span onClick={()=>{
+          
+        }}> Why join Stellar? |</span>
+        <span onClick={()=>{
+          
+        }}>LinkedIn posts</span>
       </div>
     </div>
   );

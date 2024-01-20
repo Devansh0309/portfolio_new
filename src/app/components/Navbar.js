@@ -2,10 +2,9 @@
 import Image from "next/image";
 import React from "react";
 import companyLogo from "../../../public/logo2.png";
-import { useRouter } from "next/navigation";
 
 export default function Navbar() {
-  const navigate = useRouter()
+  
   return (
     <div className="nav-content">
       <div className="nav-left">
@@ -21,13 +20,16 @@ export default function Navbar() {
       </div>
       <div className="nav-right">
         <span onClick={()=>{
-          navigate.push("./Header")
+          const el = document.getElementsByClassName("header-content")[0]
+          el.scrollIntoView({behavior:"smooth"})
         }}>About me |</span>
         <span onClick={()=>{
-          navigate.push("./Recommendations")
+          const el = document.getElementsByClassName("recommendations-content")[0]
+          el.scrollIntoView({behavior:"smooth"})
         }}> Recommendations |</span>
         <span onClick={()=>{
-          
+          const el = document.getElementsByClassName("about-stellar-content")[0]
+          el.scrollIntoView({behavior:"smooth"})
         }}> Why join Stellar? |</span>
         <span onClick={()=>{
           

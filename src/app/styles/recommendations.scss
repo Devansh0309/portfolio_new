@@ -1,30 +1,43 @@
 .recommendations-content {
   margin: auto;
-//   position: relative;
+  //   position: relative;
   width: 300px;
   height: auto;
   @include flexDisplay($justify: flex-start);
-  overflow-x:auto;
+  overflow-x: auto;
   margin-bottom: 20px;
-  column-gap: 10px;
+  column-gap: 5px;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
   .left-btn {
+    position: -webkit-sticky;
     position: sticky;
     z-index: 2;
-    // left: 0;
-    top: 50%;
+    left: 5px;
+    top: 40%;
     background: transparent;
     border: none;
     font-size: 32px;
-    // color:#fff;
+    font-weight: 600;
+    color: #fff;
   }
   .right-btn {
+    position: -webkit-sticky;
     position: sticky;
     z-index: 2;
-    // right: 0;
-    top: 50%;
+    left: 280px;
+    top: 40%;
     background: transparent;
     border: none;
     font-size: 32px;
-    // color:#fff;
+    font-weight: 600;
+    color: #fff;
   }
+}
+.recommendations-content::-webkit-scrollbar {
+  display: none;
 }

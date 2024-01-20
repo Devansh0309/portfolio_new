@@ -18,7 +18,9 @@ export default function Header() {
 
   return (
     <div className="header-content">
+      
       <div className="header-left">
+      <h1 style={{color:"#2f4f4f"}}>Know Coach</h1>
         <div className="header-left-content">
           <span className="header-left-heading">Coaches in </span>
           <span className="points">Reasoning</span>

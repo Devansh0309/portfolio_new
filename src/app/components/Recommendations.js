@@ -1,9 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import ActionAreaCard from "../elements/card";
 import personImg1 from "../../../public/Recommender1.jpeg";
-import UserCard from "../elements/card2";
-import RecommendCard from "../elements/card3";
+import RecommendCard from "../elements/card";
 
 export default function Recommendations() {
   const viewElement = useRef(null);
@@ -44,11 +42,11 @@ export default function Recommendations() {
 
   const doClick = () => {
     viewElement.current?.scrollIntoView({ behavior: "smooth" });
-    console.log("inside doClick", recommends, currentIndex);
+    // console.log("inside doClick", recommends, currentIndex);
   };
 
   const changeCardsRef = (x) => {
-    console.log("inside changeImages", currentIndex + x);
+    // console.log("inside changeImages", currentIndex + x);
     const testimonials = recommends;
     for (let i = 0; i < testimonials.length; i++) {
       if (i !== currentIndex + x) {
@@ -60,34 +58,18 @@ export default function Recommendations() {
   };
 
   useEffect(() => {
-    console.log("inside useEffect", recommends, currentIndex);
+    // console.log("inside useEffect", recommends, currentIndex);
     doClick();
   }, [currentIndex]);
 
   return (
     <div className="recommendations-content">
-      {recommends.map((item, index) => (
-        <RecommendCard
-          name={item.name}
-          profession={item.profession}
-          recommendation={item.recommendation}
-          date={item.date}
-          personImg={item.personImg}
-          key={item.profession + index}
-          refs={item.ref}
-        />
-      ))}
       {currentIndex > 0 ? (
         <button
           className="left-btn"
           onClick={() => {
             console.log("inside left btn");
             changeCardsRef(-1);
-          }}
-          style={{
-            right: `${
-              310 * recommends.length -10
-            }px`,
           }}
         >
           {"<"}
@@ -100,15 +82,21 @@ export default function Recommendations() {
             console.log("inside right btn");
             changeCardsRef(+1);
           }}
-          style={{
-            right: `${
-              310 * (recommends.length-1)
-            }px`,
-          }}
         >
           {">"}
         </button>
       ) : null}
+      {recommends.map((item, index) => (
+        <RecommendCard
+          name={item.name}
+          profession={item.profession}
+          recommendation={item.recommendation}
+          date={item.date}
+          personImg={item.personImg}
+          key={item.profession + index}
+          refs={item.ref}
+        />
+      ))}
     </div>
   );
 }

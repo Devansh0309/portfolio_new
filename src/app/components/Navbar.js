@@ -32,8 +32,10 @@ export default function Navbar() {
           el.scrollIntoView({behavior:"smooth"})
         }}> Why join Stellar? |</span>
         <span onClick={()=>{
+          const el = document.getElementsByClassName("contacts-content")[0]
+          el.scrollIntoView({behavior:"smooth"})
           
-        }}>LinkedIn posts</span>
+        }}>Contact</span>
       </div>
     </div>
   );

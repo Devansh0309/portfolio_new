@@ -3,21 +3,32 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import personImg from "../../../public/Recommender1.jpeg";
 import Image from "next/image";
 
-export default function ActionAreaCard({name, description, work, date}) {
+export default function ActionAreaCard({
+  name,
+  description,
+  recommendation,
+  date,
+  personImg,
+  ref
+}) {
   return (
-    <Card sx={{ maxWidth: 250 }}>
+    <Card sx={{ width:500, height:500 }} ref={ref}>
       <CardActionArea>
-        <Image src={personImg} height={"250"} width="250" />
+        <Image
+          src={personImg}
+          height={"300"}
+          width="352"
+          // style={{ marginLeft: "51px" }}
+        />
         <CardContent>
-          {name} { date}
+          {name} {date}
           <Typography variant="body2" color="text.secondary">
-           {work}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="div">
             {description}
+          </Typography>
+          <Typography gutterBottom variant="h6" component="div">
+            {recommendation}
           </Typography>
         </CardContent>
       </CardActionArea>

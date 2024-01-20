@@ -1,12 +1,23 @@
 import Image from "next/image";
 import React from "react";
 import personImg from "../../../public/pratibha.jpeg";
+import Button from "@mui/material/Button";
 // import headerBackground from "../../../public/headerBackground.jpg";
+import Link from "next/link";
 
 export default function Header() {
+  const styleObj = {
+    "&:hover": {
+      backgroundColor: "#ade37b",
+    },
+    "&:active": {
+      backgroundColor: "#ade37b",
+    },
+    backgroundColor: "#2f4f4f",
+  };
+
   return (
     <div className="header-content">
-      {/* <Image src={headerBackground} className="header-background" /> */}
       <div className="header-left">
         <div className="header-left-content">
           <span className="header-left-heading">Coaches in </span>
@@ -76,10 +87,19 @@ export default function Header() {
           src={personImg}
           alt="image"
           style={{
+            borderRadius: "20px",
             boxShadow: "rgba(3, 102, 214, 0.3) 0px 0px 0px 3px",
           }}
         />
-        <h5>Pratibha Paliwal</h5>
+        <h3>Pratibha Paliwal</h3>
+        <Button variant="contained" disableRipple sx={styleObj}>
+          <Link
+            href="https://www.linkedin.com/in/pratibhapaliwal"
+            target="_blank"
+          >
+            More about me
+          </Link>
+        </Button>
       </div>
     </div>
   );

@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div className="home-content">
       <Navbar/>
-      <Header/>
       <AboutStellar/>
+      <Header/>
       <Recommendations/>
     </div>
   )

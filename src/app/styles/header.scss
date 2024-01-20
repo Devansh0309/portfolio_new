@@ -3,11 +3,11 @@
   height: 667px;
   margin: auto;
   margin-bottom: 10px;
-  margin-top: 50px;
+  // margin-top: 50px;
   padding-top: 50px;
   padding-left: 20px;
   padding-right: 20px;
-  @include flexDisplay($justify: space-around, $align: flex-start);
+  @include flexDisplay($justify: space-around);
   column-gap: 30px;
   background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)),url('../../../public/headerBackground3.webp');
   background-size: 100% 100%;
@@ -27,8 +27,8 @@
       flex-wrap: wrap;
       column-gap:10px;
       .header-left-heading {
-        color: #1976d2;
-        // color: #599666;
+        // color: #1976d2;
+        color: #2f4f4f;
         font-size: 20px;
         width: 100px;
       }
@@ -37,11 +37,12 @@
        
         @include flexDisplay($direction: column, $justify: flex-start);
         padding:3px;
-        // background-color: #1976d2;
+        background-color: #2f4f4f;
+        color:#fff;
         border-radius: 5px;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
         .position {
-            color: #2f4f4f;
+            // color: #2f4f4f;
         }
         .organization {
         }
@@ -50,5 +51,6 @@
   }
   .header-right {
     text-align: center;
+    color:#2f4f4f;
   }
 }

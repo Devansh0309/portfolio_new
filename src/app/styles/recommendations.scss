@@ -1,3 +1,30 @@
-.recommendations-content{
-    @include flexDisplay($direction: column,$justify: center, $align: center)
+.recommendations-content {
+  margin: auto;
+//   position: relative;
+  width: 300px;
+  height: auto;
+  @include flexDisplay($justify: flex-start);
+  overflow-x:auto;
+  margin-bottom: 20px;
+  column-gap: 10px;
+  .left-btn {
+    position: sticky;
+    z-index: 2;
+    // left: 0;
+    top: 50%;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    // color:#fff;
+  }
+  .right-btn {
+    position: sticky;
+    z-index: 2;
+    // right: 0;
+    top: 50%;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    // color:#fff;
+  }
 }

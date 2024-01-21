@@ -26,7 +26,29 @@
       .key-points-arrow {
         color: #1976d2;
         font-weight:900;
-        border-bottom: none;
+      }
+    }
+  }
+}
+@media screen  and (max-width: 900px){
+  .about-stellar-content{
+    .stellar-img{
+      width:max-content;
+      height: max-content;
+    }
+    .key-points {
+      padding-left: 20px;
+      font-size: 20px;
+      font-weight: 400;
+      div {
+        .key-point-content {
+          // border-bottom: 4px solid #1976d2;
+        }
+  
+        .key-points-arrow {
+          color: #2f4f4f;
+
+        }
       }
     }
   }

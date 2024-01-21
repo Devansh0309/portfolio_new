@@ -10,7 +10,7 @@ export default function AboutStellar() {
   ]);
   return (
     <div className="about-stellar-content">
-      <Image src={stellarLogo2} />
+      <Image src={stellarLogo2} className="stellar-img"/>
       <div className="key-points">
         {keyPoints.map((item) => (
           <div key={item}>

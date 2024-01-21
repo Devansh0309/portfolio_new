@@ -41,6 +41,7 @@ export default function Header() {
       ],
     },
   ]);
+  
   const styleObj = {
     "&:hover": {
       backgroundColor: "#ade37b",
@@ -58,12 +59,13 @@ export default function Header() {
         {points.map((item) => (
           <div key={item.heading} className="header-left-content">
             <span className="header-left-heading">{item.heading}</span>
-
             <span className="points">
               {item.points.map((item2, index) => (
                 <span className="point" key={item2.key1 + index}>
                   <h4 className="position">{item2.key1}</h4>
-                  <div className="organization">{item2.key2}</div>
+                  {item2.key2 ? (
+                    <div className="organization">{item2.key2}</div>
+                  ) : null}
                 </span>
               ))}
             </span>

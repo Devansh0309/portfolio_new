@@ -1,0 +1,10 @@
+.contacts-content{
+    @include flexDisplay();
+    height:100px;
+    .social-contacts{
+        @include flexDisplay();
+        column-gap: 10px;
+        color:#0a66c2;
+
+    }
+}

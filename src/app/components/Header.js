@@ -1,11 +1,46 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import personImg from "../../../public/pratibha.jpeg";
 import Button from "@mui/material/Button";
 // import headerBackground from "../../../public/headerBackground.jpg";
 import Link from "next/link";
 
 export default function Header() {
+  const [points, setpoints] = useState([
+    {
+      heading: "Coaches in ",
+      points: [
+        { key1: "Reasoning", key2: "" },
+        { key1: "GRE", key2: "" },
+        { key1: "GMAT", key2: "" },
+        { key1: "SAT", key2: "" },
+        { key1: "UCAT", key2: "" },
+        { key1: "Online Classes", key2: "" },
+      ],
+    },
+    {
+      heading: "Skills ",
+      points: [
+        { key1: "Team Management", key2: "" },
+        { key1: "Management", key2: "" },
+        { key1: "Training", key2: "" },
+        { key1: "Project Management", key2: "" },
+        { key1: "Strategic Planning", key2: "" },
+        { key1: "Analytics", key2: "" },
+      ],
+    },
+    {
+      heading: "Experience ",
+      points: [
+        { key1: "Founder & Coach", key2: "Stellar Practice" },
+        { key1: "Academic Head", key2: "The Princeton Review" },
+        { key1: "Academic Head", key2: "Jamboree Edu. Pvt. Ltd." },
+        { key1: "Sr. Knowledge Expert", key2: "T.I.M.E." },
+        { key1: "Sr. Trainer ", key2: "Jamboree Edu. Pvt. Ltd." },
+        { key1: "Management Intern", key2: "Indian Airlines Ltd." },
+      ],
+    },
+  ]);
   const styleObj = {
     "&:hover": {
       backgroundColor: "#ade37b",
@@ -20,72 +55,20 @@ export default function Header() {
     <div className="header-content">
       <div className="header-left">
         <h1 style={{ color: "#2f4f4f" }}>Know Coach</h1>
-        <div className="header-left-content">
-          <span className="header-left-heading">Coaches in </span>
-          <span className="points">
-            <span className="point">Reasoning</span>
+        {points.map((item) => (
+          <div key={item.heading} className="header-left-content">
+            <span className="header-left-heading">{item.heading}</span>
 
-            <span className="point">GRE</span>
-
-            <span className="point">GMAT</span>
-
-            <span className="point">SAT</span>
-
-            <span className="point">UCAT</span>
-
-            <span className="point"> Online Classes</span>
-          </span>
-        </div>
-        <div className="header-left-content">
-          <span className="header-left-heading">Skills </span>
-          <span className="points">
-            <span className="point">Team Management</span>
-
-            <span className="point">Management</span>
-
-            <span className="point">Training</span>
-
-            <span className="point">Project Management</span>
-
-            <span className="point">Strategic Planning</span>
-
-            <span className="point">Analytics</span>
-          </span>
-        </div>
-        <div className="header-left-content">
-          <span className="header-left-heading">Experience </span>
-          <span className="points">
-            <span className="point">
-              <h4 className="position">Founder & Coach</h4>
-              <div className="organization">Stellar Practice</div>
+            <span className="points">
+              {item.points.map((item2, index) => (
+                <span className="point" key={item2.key1 + index}>
+                  <h4 className="position">{item2.key1}</h4>
+                  <div className="organization">{item2.key2}</div>
+                </span>
+              ))}
             </span>
-
-            <span className="point">
-              <h4 className="position">Academic Head</h4>
-              <div className="organization">The Princeton Review</div>
-            </span>
-
-            <span className="point">
-              <h4 className="position">Academic Head</h4>
-              <div className="organization">Jamboree Edu. Pvt. Ltd.</div>
-            </span>
-
-            <span className="point">
-              <h4 className="position">Sr. Knowledge Expert</h4>
-              <div className="organization">T.I.M.E.</div>
-            </span>
-
-            <span className="point">
-              <h4 className="position">Sr. Trainer </h4>
-              <div className="organization">Jamboree Edu. Pvt. Ltd.</div>
-            </span>
-
-            <span className="point">
-              <h4 className="position">Management Intern</h4>
-              <div className="organization">Indian Airlines Limited</div>
-            </span>
-          </span>
-        </div>
+          </div>
+        ))}
       </div>
       <div className="header-right">
         <Image

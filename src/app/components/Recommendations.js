@@ -1,4 +1,4 @@
-"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import personImg1 from "../../../public/Recommender1.jpeg";
 import RecommendCard from "../elements/card";
@@ -26,7 +26,26 @@ export default function Recommendations() {
       personImg: personImg1,
       ref: null,
     },
-   
+    {
+      name: "Anurag Kalra",
+      profession:
+        "Automotive Application expert in the field plastics, rubbers and other interior laminates over plastics",
+      recommendation:
+        "Great teacher and personal coach for every student, experience speaks up at every moment in class!",
+      date: "May 17, 2019",
+      personImg: personImg1,
+      ref: viewElement,
+    },
+    {
+      name: "Anurag Kalra",
+      profession:
+        "Automotive Application expert in the field plastics, rubbers and other interior laminates over plastics",
+      recommendation:
+        "Great teacher and personal coach for every student, experience speaks up at every moment in class!",
+      date: "May 17, 2019",
+      personImg: personImg1,
+      ref: null,
+    },
   ]);
 
   const [currentIndex, setCurrentIndex] = useState(0);

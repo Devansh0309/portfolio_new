@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import React from "react";
-import companyLogo from "../../../public/logo2.png";
+import companyLogo from "../../../public/logo2.PNG";
 
 export default function Navbar() {
   

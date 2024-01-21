@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import stellarLogo2 from "../../../public/stellarLogo2.png";
+import stellarLogo2 from "../../../public/stellarLogo2.PNG";
 import Image from "next/image";
 
 export default function AboutStellar() {

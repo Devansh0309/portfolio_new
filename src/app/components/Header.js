@@ -18,67 +18,72 @@ export default function Header() {
 
   return (
     <div className="header-content">
-      
       <div className="header-left">
-      <h1 style={{color:"#2f4f4f"}}>Know Coach</h1>
+        <h1 style={{ color: "#2f4f4f" }}>Know Coach</h1>
         <div className="header-left-content">
           <span className="header-left-heading">Coaches in </span>
-          <span className="points">Reasoning</span>
+          <span className="points">
+            <span className="point">Reasoning</span>
 
-          <span className="points">GRE</span>
+            <span className="point">GRE</span>
 
-          <span className="points">GMAT</span>
+            <span className="point">GMAT</span>
 
-          <span className="points">SAT</span>
+            <span className="point">SAT</span>
 
-          <span className="points">UCAT</span>
+            <span className="point">UCAT</span>
 
-          <span className="points"> Online Classes</span>
+            <span className="point"> Online Classes</span>
+          </span>
         </div>
         <div className="header-left-content">
           <span className="header-left-heading">Skills </span>
-          <span className="points">Team Management</span>
+          <span className="points">
+            <span className="point">Team Management</span>
 
-          <span className="points">Management</span>
+            <span className="point">Management</span>
 
-          <span className="points">Training</span>
+            <span className="point">Training</span>
 
-          <span className="points">Project Management</span>
+            <span className="point">Project Management</span>
 
-          <span className="points">Strategic Planning</span>
+            <span className="point">Strategic Planning</span>
 
-          <span className="points">Analytics</span>
+            <span className="point">Analytics</span>
+          </span>
         </div>
         <div className="header-left-content">
           <span className="header-left-heading">Experience </span>
           <span className="points">
-            <h4 className="position">Founder & Coach</h4>
-            <div className="organization">Stellar Practice</div>
-          </span>
+            <span className="point">
+              <h4 className="position">Founder & Coach</h4>
+              <div className="organization">Stellar Practice</div>
+            </span>
 
-          <span className="points">
-            <h4 className="position">Academic Head</h4>
-            <div className="organization">Stellar Practice</div>
-          </span>
+            <span className="point">
+              <h4 className="position">Academic Head</h4>
+              <div className="organization">The Princeton Review</div>
+            </span>
 
-          <span className="points">
-            <h4 className="position">Founder & Coach</h4>
-            <div className="organization">Stellar Practice</div>
-          </span>
+            <span className="point">
+              <h4 className="position">Academic Head</h4>
+              <div className="organization">Jamboree Edu. Pvt. Ltd.</div>
+            </span>
 
-          <span className="points">
-            <h4 className="position">Founder & Coach</h4>
-            <div className="organization">Stellar Practice</div>
-          </span>
+            <span className="point">
+              <h4 className="position">Sr. Knowledge Expert</h4>
+              <div className="organization">T.I.M.E.</div>
+            </span>
 
-          <span className="points">
-            <h4 className="position">Founder & Coach</h4>
-            <div className="organization">Stellar Practice</div>
-          </span>
+            <span className="point">
+              <h4 className="position">Sr. Trainer </h4>
+              <div className="organization">Jamboree Edu. Pvt. Ltd.</div>
+            </span>
 
-          <span className="points">
-            <h4 className="position">Founder & Coach</h4>
-            <div className="organization">Stellar Practice</div>
+            <span className="point">
+              <h4 className="position">Management Intern</h4>
+              <div className="organization">Indian Airlines Limited</div>
+            </span>
           </span>
         </div>
       </div>

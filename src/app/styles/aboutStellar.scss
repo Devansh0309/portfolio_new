@@ -3,10 +3,11 @@
   height: 667px;
   @include flexDisplay($direction: column, $justify: space-around);
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
-    ),
-    url("../../../public/headerBackground.jpg");
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  ),
+    url("../../../public/headerBackground10.jpg");
+  border-bottom: 5px solid #2f4f4f;  
   .key-points {
     font-size: 30px;
     font-weight: 600;
@@ -15,6 +16,7 @@
       $justify: flex-start,
       $align: flex-start
     );
+    color: #fff;
     row-gap: 30px;
     div {
       .key-point-content {

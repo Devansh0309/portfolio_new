@@ -1,43 +1,56 @@
-.recommendations-content {
-  margin: auto;
-  //   position: relative;
-  width: 300px;
-  height: auto;
-  @include flexDisplay($justify: flex-start);
-  overflow-x: auto;
-  margin-bottom: 20px;
-  column-gap: 5px;
-
-  /* Hide scrollbar for IE, Edge and Firefox */
-
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-
-  .left-btn {
-    position: -webkit-sticky;
-    position: sticky;
-    z-index: 2;
-    left: 5px;
-    top: 40%;
-    background: transparent;
-    border: none;
-    font-size: 32px;
-    font-weight: 600;
-    color: #fff;
+.recommends{
+  width: 100%;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
+  ),url('../../../public/headerBackground4.webp');
+  background-size:auto;
+  @include flexDisplay();
+  border-bottom: 5px solid #2f4f4f;
+  .recommendations-content {
+    padding: auto;
+    margin: auto;
+    width: 50%;
+    height: auto;
+   
+    @include flexDisplay($justify: flex-start);
+    overflow-x: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    column-gap: 10px;
+  
+    /* Hide scrollbar for IE, Edge and Firefox */
+  
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  
+    .left-btn {
+      position: -webkit-sticky;
+      position: sticky;
+      z-index: 2;
+      left: 5%;
+      top: 40%;
+      background: #2f4f4f;
+      border: none;
+      font-size: 32px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .right-btn {
+      position: -webkit-sticky;
+      position: sticky;
+      z-index: 2;
+      right:5%;
+      top: 40%;
+      background: #2f4f4f;
+      border: none;
+      font-size: 32px;
+      font-weight: 600;
+      color: #fff;
+    }
   }
-  .right-btn {
-    position: -webkit-sticky;
-    position: sticky;
-    z-index: 2;
-    left: 280px;
-    top: 40%;
-    background: transparent;
-    border: none;
-    font-size: 32px;
-    font-weight: 600;
-    color: #fff;
+  .recommendations-content::-webkit-scrollbar {
+    display: none;
   }
-}
-.recommendations-content::-webkit-scrollbar {
-  display: none;
+  
 }

@@ -11,12 +11,18 @@ export default function RecommendCard({
 }) {
   return (
     <div className="recommendCard-content" ref={refs}>
-      <Image src={personImg} alt="not found" width="300" height="300" />
+      <Image
+        src={personImg}
+        alt="not found"
+        width="300"
+        height="300"
+        // style={{ borderRadius: "20px 20px 0 0" }}
+      />
       <div className="below-content">
         <div className="name-and-date">
           <span>{name}</span>
           <span> </span>
-          { date}
+          {date}
         </div>
         <div className="profession">{profession}</div>
         <div className="recommendation">{recommendation}</div>

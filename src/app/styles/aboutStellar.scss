@@ -7,6 +7,7 @@
     rgba(255, 255, 255, 0.1)
   ),
     url("../../../public/headerBackground10.jpg");
+   
   border-bottom: 5px solid #2f4f4f; 
   row-gap: 130px; 
   .key-points {
@@ -21,15 +22,19 @@
     color: #fff;
     row-gap: 30px;
     div {
-      @include flexDisplay($justify: flex-start, $align: flex-start);
+      @include flexDisplay($justify: flex-start, $align: center);
       column-gap: 5px;
       .key-point-content {
         // border-bottom: 4px solid #1976d2;
       }
 
       .key-points-arrow {
-        color: #1976d2;
-        font-weight:900;
+        color:#1976d2;
+        background: #1976d2;
+        
+        width:15px;
+        height:15px;
+        // font-weight:900;
       }
     }
   }
@@ -46,13 +51,16 @@
       font-size: 20px;
       font-weight: 400;
       div {
+        
         .key-point-content {
           // border-bottom: 4px solid #1976d2;
         }
   
         .key-points-arrow {
-          color: #2f4f4f;
-
+          color:#2f4f4f;
+          background: #2f4f4f;
+          width:10px;
+          height:10px;
         }
       }
     }

@@ -14,7 +14,8 @@ export default function AboutStellar() {
       <div className="key-points">
         {keyPoints.map((item) => (
           <div key={item}>
-            <span className="key-points-arrow">{'>'} </span>
+            <span className="key-points-arrow">-</span>
+            <span> </span>
             <span className="key-point-content">{item}</span>
           </div>
         ))}

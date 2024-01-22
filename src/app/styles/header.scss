@@ -72,11 +72,14 @@
 
 @media screen and (max-width: 848px) {
   .header-content {
-    @include flexDisplay($direction: column-reverse, $justify: flex-start);
+    @include flexDisplay($direction: column-reverse, $justify: flex-end);
     row-gap: 20px;
+    padding-top: 17px;
+   
+    padding-bottom: 18px;
     .header-left {
       width: 100%;
-      row-gap: 20px;
+      row-gap: 18px;
       .about-me-heading{
         font-size: 22px;
       }

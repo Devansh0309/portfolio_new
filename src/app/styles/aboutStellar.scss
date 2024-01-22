@@ -11,6 +11,7 @@
   .key-points {
     font-size: 30px;
     font-weight: 600;
+    padding-left: 20px;
     @include flexDisplay(
       $direction: column,
       $justify: flex-start,
@@ -19,6 +20,8 @@
     color: #fff;
     row-gap: 30px;
     div {
+      @include flexDisplay($justify: flex-start, $align: flex-start);
+      column-gap: 5px;
       .key-point-content {
         // border-bottom: 4px solid #1976d2;
       }
@@ -30,7 +33,8 @@
     }
   }
 }
-@media screen  and (max-width: 900px){
+
+@media screen  and (max-width: 800px){
   .about-stellar-content{
     .stellar-img{
       width:max-content;

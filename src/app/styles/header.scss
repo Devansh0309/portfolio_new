@@ -1,12 +1,10 @@
 .header-content {
   width: 100%;
   height: 667px;
-  margin: auto;
-  // margin-bottom: 10px;
-  // margin-top: 50px;
-  padding-top: 50px;
+  padding-top: 12px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 12px;
   @include flexDisplay($justify: space-around);
   column-gap: 30px;
   background: linear-gradient(
@@ -14,12 +12,7 @@
       rgba(255, 255, 255, 0.4)
     ),
     url("../../../public/headerBackground6.jpg");
-  background-size: 100% 100%;
-  // background-repeat: no-repeat;
-  //   backface-visibility: hidden;
-  //   .header-background{
-  //     opacity: 0.5;
-  //   }
+  background-size: cover;
   border-bottom: 5px solid #2f4f4f;
   .header-left {
     @include flexDisplay(
@@ -29,6 +22,9 @@
     );
     width: 70%;
     row-gap: 40px;
+    .about-me-heading{
+      color: #2f4f4f;
+    }
     .header-left-content {
       @include flexDisplay($justify: space-between, $align: flex-start);
 
@@ -44,9 +40,9 @@
         gap: 10px;
         flex-wrap: wrap;
         .point {
-          // border-bottom: 3px solid #1976d2;
-
-          @include flexDisplay($direction: column, $justify: flex-start);
+          width: 200px;
+          
+          @include flexDisplay($direction: column);
           padding: 3px;
           background-color: #2f4f4f;
           color: #fff;
@@ -54,9 +50,10 @@
           box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
             rgba(0, 0, 0, 0.24) 0px 1px 2px;
           .position {
-            // color: #2f4f4f;
+            text-align: center;
           }
           .organization {
+            text-align: center;
           }
         }
       }
@@ -65,8 +62,45 @@
   .header-right {
     text-align: center;
     color: #2f4f4f;
+    .about-me-img {
+      border-radius: 20px;
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
   }
 }
-@media screen  and (max-width: 900px){
-  
+
+@media screen and (max-width: 848px) {
+  .header-content {
+    @include flexDisplay($direction: column-reverse, $justify: flex-start);
+    .header-left {
+      width: 100%;
+      .about-me-heading{
+        font-size: 22px;
+      }
+      .header-left-content {
+        width: 100%;
+        .header-left-heading{
+          font-size: 18px;
+        }
+        .points {
+          width: 98%;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          .point {
+            min-width: 150px;
+            height:63px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .header-right {
+      margin-top: 10px;
+      font-size: 15px;
+      .about-me-img {
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+  }
 }

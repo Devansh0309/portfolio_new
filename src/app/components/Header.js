@@ -55,7 +55,7 @@ export default function Header() {
   return (
     <div className="header-content">
       <div className="header-left">
-        <h1 style={{ color: "#2f4f4f" }}>Know Coach</h1>
+        <h1 className="about-me-heading">Know Coach</h1>
         {points.map((item) => (
           <div key={item.heading} className="header-left-content">
             <span className="header-left-heading">{item.heading}</span>
@@ -78,10 +78,7 @@ export default function Header() {
           height="250"
           src={personImg}
           alt="image"
-          style={{
-            borderRadius: "20px",
-            boxShadow: "rgba(3, 102, 214, 0.3) 0px 0px 0px 3px",
-          }}
+          className="about-me-img"
         />
         <h3>Pratibha Paliwal</h3>
         <Button variant="contained" disableRipple sx={styleObj}>

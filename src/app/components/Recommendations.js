@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import React, { useEffect, useRef, useState } from "react";
 import personImg1 from "../../../public/Recommender1.jpeg";
 import RecommendCard from "../elements/card";
 
 export default function Recommendations() {
   const viewElement = useRef(null);
+  const [contentWidth, setContentWidth] = useState(0);
   const [recommends, setRecommends] = useState([
     {
       name: "Anurag Kalra",
@@ -36,7 +37,6 @@ export default function Recommendations() {
       personImg: personImg1,
       ref: viewElement,
     },
-    
   ]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -57,6 +57,29 @@ export default function Recommendations() {
     setRecommends(testimonials);
     setCurrentIndex(currentIndex + x);
   };
+  useEffect(() => {
+    function handleSize() {
+      const ele = document.getElementsByClassName("recommends")[0];
+      const parentWidth = ele.getBoundingClientRect().width;
+      const childWidth1 = 0.8 * parentWidth;
+      const childWidth2 = 300 * recommends.length;
+      // console.log("line 66", parentWidth, childWidth1, childWidth2);
+      if (childWidth1 < childWidth2) {
+        setContentWidth(childWidth1);
+        return () => window.removeEventListener("resize", handleSize);
+      }
+      setContentWidth(childWidth2);
+    }
+
+    // Add event listener
+    window.addEventListener("resize", handleSize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleSize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleSize);
+  }, []);
 
   useEffect(() => {
     // console.log("inside useEffect", recommends, currentIndex);
@@ -68,11 +91,7 @@ export default function Recommendations() {
       <div
         className="recommendations-content"
         style={{
-          width: `calc(${
-            0.8 *window.innerWidth < 300 * recommends.length
-              ? 0.8 *window.innerWidth
-              : 300 * recommends.length
-          }px)`,
+          width: contentWidth ? contentWidth : "80%",
         }}
       >
         {currentIndex > 0 ? (

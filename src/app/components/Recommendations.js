@@ -66,7 +66,7 @@ export default function Recommendations() {
       // console.log("line 66", parentWidth, childWidth1, childWidth2);
       if (childWidth1 < childWidth2) {
         setContentWidth(childWidth1);
-        return () => window.removeEventListener("resize", handleSize);
+        return () => window?.removeEventListener("resize", handleSize);
       }
       setContentWidth(childWidth2);
     }
@@ -78,7 +78,7 @@ export default function Recommendations() {
     handleSize();
 
     // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleSize);
+    return () => window?.removeEventListener("resize", handleSize);
   }, []);
 
   useEffect(() => {

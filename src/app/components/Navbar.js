@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import companyLogo from "../../../public/logo2.PNG";
@@ -45,15 +46,7 @@ export default function Navbar() {
           }}
         >
           {" "}
-          Why join Stellar? |
-        </span>
-        <span
-          onClick={() => {
-            const el = document.getElementsByClassName("contacts-content")[0];
-            el.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          Contact
+          Why join Stellar Practice?
         </span>
       </div>
     </div>

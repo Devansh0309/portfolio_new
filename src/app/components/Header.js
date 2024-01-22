@@ -1,47 +1,45 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import personImg from "../../../public/pratibha.jpeg";
-import Button from "@mui/material/Button";
-// import headerBackground from "../../../public/headerBackground.jpg";
-import Link from "next/link";
+import Contacts from "./Contacts";
 
+let points = [
+  {
+    heading: "Coaches in ",
+    points: [
+      { key1: "Reasoning", key2: "" },
+      { key1: "GRE", key2: "" },
+      { key1: "GMAT", key2: "" },
+      { key1: "SAT", key2: "" },
+      { key1: "UCAT", key2: "" },
+      { key1: "Online Classes", key2: "" },
+    ],
+  },
+  {
+    heading: "Skills ",
+    points: [
+      { key1: "Team Management", key2: "" },
+      { key1: "Management", key2: "" },
+      { key1: "Training", key2: "" },
+      { key1: "Project Management", key2: "" },
+      { key1: "Strategic Planning", key2: "" },
+      { key1: "Analytics", key2: "" },
+    ],
+  },
+  {
+    heading: "Experience ",
+    points: [
+      { key1: "Founder & Coach", key2: "Stellar Practice" },
+      { key1: "Academic Head", key2: "The Princeton Review" },
+      { key1: "Academic Head", key2: "Jamboree Edu. Pvt. Ltd." },
+      { key1: "Sr. Knowledge Expert", key2: "T.I.M.E." },
+      { key1: "Sr. Trainer ", key2: "Jamboree Edu. Pvt. Ltd." },
+      { key1: "Management Intern", key2: "Indian Airlines Ltd." },
+    ],
+  },
+];
 export default function Header() {
-  const [points, setpoints] = useState([
-    {
-      heading: "Coaches in ",
-      points: [
-        { key1: "Reasoning", key2: "" },
-        { key1: "GRE", key2: "" },
-        { key1: "GMAT", key2: "" },
-        { key1: "SAT", key2: "" },
-        { key1: "UCAT", key2: "" },
-        { key1: "Online Classes", key2: "" },
-      ],
-    },
-    {
-      heading: "Skills ",
-      points: [
-        { key1: "Team Management", key2: "" },
-        { key1: "Management", key2: "" },
-        { key1: "Training", key2: "" },
-        { key1: "Project Management", key2: "" },
-        { key1: "Strategic Planning", key2: "" },
-        { key1: "Analytics", key2: "" },
-      ],
-    },
-    {
-      heading: "Experience ",
-      points: [
-        { key1: "Founder & Coach", key2: "Stellar Practice" },
-        { key1: "Academic Head", key2: "The Princeton Review" },
-        { key1: "Academic Head", key2: "Jamboree Edu. Pvt. Ltd." },
-        { key1: "Sr. Knowledge Expert", key2: "T.I.M.E." },
-        { key1: "Sr. Trainer ", key2: "Jamboree Edu. Pvt. Ltd." },
-        { key1: "Management Intern", key2: "Indian Airlines Ltd." },
-      ],
-    },
-  ]);
-  
+
   const styleObj = {
     "&:hover": {
       backgroundColor: "#ade37b",
@@ -81,14 +79,7 @@ export default function Header() {
           className="about-me-img"
         />
         <h3>Pratibha Paliwal</h3>
-        <Button variant="contained" disableRipple sx={styleObj}>
-          <Link
-            href="https://www.linkedin.com/in/pratibhapaliwal"
-            target="_blank"
-          >
-            More about me
-          </Link>
-        </Button>
+        <Contacts />
       </div>
     </div>
   );

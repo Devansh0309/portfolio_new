@@ -6,15 +6,16 @@
   ),url('../../../public/headerBackground4.webp');
   background-size:auto;
   @include flexDisplay();
-  border-bottom: 5px solid #2f4f4f;
+  // border-bottom: 5px solid #2f4f4f;
   .recommendations-content {
     padding: auto;
     margin: auto;
-    width: 50%;
+    width:80%;
     height: auto;
    
     @include flexDisplay($justify: flex-start);
     overflow-x: auto;
+    
     padding-top: 40px;
     padding-bottom: 40px;
     column-gap: 10px;
@@ -27,7 +28,6 @@
     .left-btn {
       position: -webkit-sticky;
       position: sticky;
-      z-index: 2;
       left: 5%;
       top: 40%;
       background: #2f4f4f;
@@ -39,7 +39,6 @@
     .right-btn {
       position: -webkit-sticky;
       position: sticky;
-      z-index: 2;
       right:5%;
       top: 40%;
       background: #2f4f4f;

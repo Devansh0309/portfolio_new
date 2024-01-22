@@ -1,13 +1,14 @@
 .about-stellar-content {
   width: 100%;
   height: 667px;
-  @include flexDisplay($direction: column, $justify: space-around);
+  @include flexDisplay($direction: column);
   background-image: linear-gradient(
     rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0.1)
   ),
     url("../../../public/headerBackground10.jpg");
-  border-bottom: 5px solid #2f4f4f;  
+  border-bottom: 5px solid #2f4f4f; 
+  row-gap: 130px; 
   .key-points {
     font-size: 30px;
     font-weight: 600;
@@ -34,11 +35,11 @@
   }
 }
 
-@media screen  and (max-width: 800px){
+@media screen  and (max-width: 740px){
   .about-stellar-content{
     .stellar-img{
-      width:max-content;
-      height: max-content;
+      width:97%;
+      
     }
     .key-points {
       padding-left: 20px;

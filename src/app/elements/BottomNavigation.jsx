@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
@@ -6,7 +7,6 @@ import Paper from "@mui/material/Paper";
 import { BsPersonVcardFill } from "react-icons/bs";
 import { CiStar } from "react-icons/ci";
 import { MdRecommend } from "react-icons/md";
-import { MdOutlineConnectWithoutContact } from "react-icons/md";
 
 export default function FixedBottomNavigation() {
   const [value, setValue] = useState(0);
@@ -34,11 +34,14 @@ export default function FixedBottomNavigation() {
           onChange={(event, newValue) => {
             setValue(newValue);
           }}
+          sx={{ background: "#2f4f4f", "& .MuiBottomNavigationAction-root, .Mui-selected, svg": {
+            color: "#fff"
+          } }}
         >
           <BottomNavigationAction
             label="About me"
-            icon={<BsPersonVcardFill />}
-            sx={{ fontSize: "30px" }}
+            icon={<BsPersonVcardFill style={{ background: "#0a66c2", borderRadius:"50%", padding:"2px" }}  />}
+            sx={{ fontSize: "30px", color: "#fff" }}
             onClick={(e) => {
               const el = document.getElementsByClassName("header-content")[0];
               el.scrollIntoView({ behavior: "smooth" });
@@ -46,8 +49,8 @@ export default function FixedBottomNavigation() {
           />
           <BottomNavigationAction
             label="Why join Stellar?"
-            icon={<CiStar />}
-            sx={{ fontSize: "30px" }}
+            icon={<CiStar style={{ background: "red",borderRadius:"50%", padding:"2px" }} />}
+            sx={{ fontSize: "30px", color: "#fff" }}
             onClick={() => {
               const el = document.getElementsByClassName(
                 "about-stellar-content"
@@ -57,21 +60,12 @@ export default function FixedBottomNavigation() {
           />
           <BottomNavigationAction
             label="Recommendations"
-            icon={<MdRecommend />}
-            sx={{ fontSize: "30px" }}
+            icon={<MdRecommend style={{ background: "#0a66c2",borderRadius:"50%", padding:"2px" }} />}
+            sx={{ fontSize: "30px", color: "#fff" }}
             onClick={() => {
               const el = document.getElementsByClassName(
                 "recommendations-content"
               )[0];
-              el.scrollIntoView({ behavior: "smooth" });
-            }}
-          />
-          <BottomNavigationAction
-            label="Contact"
-            icon={<MdOutlineConnectWithoutContact/>}
-            sx={{ fontSize: "30px" }}
-            onClick={() => {
-              const el = document.getElementsByClassName("contacts-content")[0];
               el.scrollIntoView({ behavior: "smooth" });
             }}
           />

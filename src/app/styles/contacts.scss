@@ -1,10 +1,8 @@
 .contacts-content{
     @include flexDisplay();
-    height:100px;
+    margin-top: 5px;
     .social-contacts{
         @include flexDisplay();
         column-gap: 10px;
-        
-
     }
 }

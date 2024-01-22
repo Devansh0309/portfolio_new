@@ -1,4 +1,4 @@
-
+"use client"
 import React, { useEffect, useRef, useState } from "react";
 import personImg1 from "../../../public/Recommender1.jpeg";
 import RecommendCard from "../elements/card";
@@ -36,16 +36,7 @@ export default function Recommendations() {
       personImg: personImg1,
       ref: viewElement,
     },
-    {
-      name: "Anurag Kalra",
-      profession:
-        "Automotive Application expert in the field plastics, rubbers and other interior laminates over plastics",
-      recommendation:
-        "Great teacher and personal coach for every student, experience speaks up at every moment in class!",
-      date: "May 17, 2019",
-      personImg: personImg1,
-      ref: null,
-    },
+    
   ]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -74,7 +65,16 @@ export default function Recommendations() {
 
   return (
     <div className="recommends">
-      <div className="recommendations-content">
+      <div
+        className="recommendations-content"
+        style={{
+          width: `calc(${
+            0.8 *window.innerWidth < 300 * recommends.length
+              ? 0.8 *window.innerWidth
+              : 300 * recommends.length
+          }px)`,
+        }}
+      >
         {currentIndex > 0 ? (
           <button
             className="left-btn"
@@ -86,7 +86,7 @@ export default function Recommendations() {
             {"<"}
           </button>
         ) : null}
-        
+
         {recommends.map((item, index) => (
           <RecommendCard
             name={item.name}
@@ -102,7 +102,7 @@ export default function Recommendations() {
           <button
             className="right-btn"
             onClick={() => {
-              console.log("inside right btn");
+              // console.log("inside right btn");
               changeCardsRef(+1);
             }}
           >

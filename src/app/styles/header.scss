@@ -33,7 +33,8 @@
         // color: #1976d2;
         color: #2f4f4f;
         font-size: 20px;
-        width: 100px;
+        min-width: 100px;
+        word-wrap: break-word;
       }
       .points {
         @include flexDisplay($justify: flex-start, $align: flex-start);
@@ -72,8 +73,10 @@
 @media screen and (max-width: 848px) {
   .header-content {
     @include flexDisplay($direction: column-reverse, $justify: flex-start);
+    row-gap: 20px;
     .header-left {
       width: 100%;
+      row-gap: 20px;
       .about-me-heading{
         font-size: 22px;
       }

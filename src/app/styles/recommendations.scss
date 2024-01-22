@@ -16,8 +16,8 @@
 
     @include flexDisplay($justify: flex-start);
     overflow-x: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     column-gap: 5px;
 
     /* Hide scrollbar for IE, Edge and Firefox */

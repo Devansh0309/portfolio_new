@@ -35,6 +35,7 @@
         font-size: 20px;
         min-width: 100px;
         word-wrap: break-word;
+        
       }
       .points {
         @include flexDisplay($justify: flex-start, $align: flex-start);

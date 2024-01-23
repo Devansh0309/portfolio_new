@@ -1,13 +1,15 @@
 .recommends {
   width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.2),
       rgba(255, 255, 255, 0.2)
     ),
     url("../../../public/headerBackground4.webp");
-  // background-size: 100% 100%;
+ 
   @include flexDisplay();
-  // border-bottom: 5px solid #2f4f4f;
+ 
   .recommendations-content {
     padding: auto;
     margin: auto;
@@ -16,8 +18,7 @@
 
     @include flexDisplay($justify: flex-start);
     overflow-x: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+
     column-gap: 5px;
 
     /* Hide scrollbar for IE, Edge and Firefox */
@@ -50,12 +51,5 @@
   }
   .recommendations-content::-webkit-scrollbar {
     display: none;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .recommends {
-    .recommendations-content {
-    }
   }
 }

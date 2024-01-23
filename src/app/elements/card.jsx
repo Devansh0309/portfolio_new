@@ -14,9 +14,9 @@ export default function RecommendCard({
       <Image
         src={personImg}
         alt="not found"
-        width="300"
-        height="300"
-        // style={{ borderRadius: "20px 20px 0 0" }}
+        width="250"
+        height="250"
+        className=""
       />
       <div className="below-content">
         <div className="name-and-date">
